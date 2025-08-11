@@ -20,20 +20,25 @@ const pages = [
 
 export default function Home() {
   return (
-    <main className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-8">Hospitality Explorer — Pages</h1>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {pages.map((p) => (
-          <li key={p.href}>
-            <Link
-              href={p.href}
-              className="block rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
-            >
-              {p.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <main>
+      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white">
+        <div className="app-container py-16">
+          <h1 className="text-4xl font-extrabold">Hospitality Explorer</h1>
+          <p className="mt-3 text-white/80">Click any page to preview the build.</p>
+        </div>
+      </section>
+
+      <section className="app-container py-10">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {pages.map(({ href, label }) => (
+            <li key={href}>
+              <Link href={href} className="card block font-semibold">
+                {label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
     </main>
   );
 }
