@@ -15,7 +15,8 @@ const pages = [
   { href: "/platforms-modules", label: "Platforms & Modules" },
   { href: "/cta", label: "CTA Split Form" },
   { href: "/industries", label: "Industries" },
-  { href: "/footer", label: "Footer / Subscribe" }
+  { href: "/footer", label: "Footer / Subscribe" },
+  { href: "/experiences", label: "JSON Data Explorer" }
 ];
 
 export default function Home() {
